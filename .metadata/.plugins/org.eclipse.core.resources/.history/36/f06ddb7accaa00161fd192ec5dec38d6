@@ -1,0 +1,5 @@
+package py.edu.facitec.edgar.entidad;
+
+public class Turista {
+
+}

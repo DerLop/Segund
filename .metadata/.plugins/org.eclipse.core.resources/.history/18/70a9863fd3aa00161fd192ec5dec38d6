@@ -1,0 +1,5 @@
+package py.edu.facitec.edgar.movimiento;
+
+public class Pasaje {
+
+}

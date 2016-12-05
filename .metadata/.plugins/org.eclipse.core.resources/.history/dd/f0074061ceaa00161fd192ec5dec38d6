@@ -1,0 +1,16 @@
+package py.edu.facitec.edgar.entidad;
+
+import java.util.Date;
+
+public class Turista extends Entidad {
+	private String nombre;
+	private Date fechaNacimiento;
+	
+	public Turista(){
+		nombre="";
+		fechaNacimiento=new Date();		
+	}
+	
+	public void 
+
+}

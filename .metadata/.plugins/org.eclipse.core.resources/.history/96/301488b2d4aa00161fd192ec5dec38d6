@@ -1,0 +1,11 @@
+package py.edu.facitec.edgar.movimiento;
+
+import java.math.BigDecimal;
+
+import py.edu.facitec.edgar.interfaz.TransporteInterfaz;
+
+public  class Viaje implements TransporteInterfaz {
+	
+	
+
+}

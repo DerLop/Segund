@@ -1,0 +1,46 @@
+package py.edu.facitec.examen_parcial_ii.buscadores;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.BoxLayout;
+import javax.swing.JTextField;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+
+public class BuscadorCliente extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField tfBuscar;
+	private JTable table;
+
+	
+	/**
+	 * Create the dialog.
+	 */
+	public BuscadorCliente() {
+		setBounds(100, 100, 514, 324);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		{
+			tfBuscar = new JTextField();
+			contentPanel.add(tfBuscar, BorderLayout.NORTH);
+			tfBuscar.setColumns(10);
+		}
+		{
+			JScrollPane scrollPane = new JScrollPane();
+			contentPanel.add(scrollPane, BorderLayout.CENTER);
+			{
+				table = new JTable();
+				scrollPane.setViewportView(table);
+			}
+		}
+	}
+
+}

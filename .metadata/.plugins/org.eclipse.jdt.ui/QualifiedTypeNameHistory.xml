@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="py.edu.facitec.examen_parcial_ii.buscadores.BuscadorCliente"/>
+<fullyQualifiedTypeName name="javax.swing.table.AbstractTableModel"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+<fullyQualifiedTypeName name="py.edu.facitec.examen_parcial_ii.presentacion.ModeloTablaCliente"/>
+<fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+<fullyQualifiedTypeName name="py.edu.facitec.examen_parcial_ii.interfaces.InterfazBuscadorClientes"/>
+<fullyQualifiedTypeName name="py.edu.facitec.examen_parcial_ii.dao.ClienteDao"/>
+<fullyQualifiedTypeName name="py.edu.facitec.examen_parcial_ii.modelo.Cliente"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

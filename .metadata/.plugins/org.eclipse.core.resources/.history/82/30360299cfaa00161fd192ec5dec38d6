@@ -1,0 +1,19 @@
+package py.edu.facitec.edgar.entidad;
+
+import java.util.List;
+
+public class TarjetaDeCredito {
+	
+	private String empresa;
+	private double monto;
+	
+	
+	
+	public TarjetaDeCredito(){
+		empresa="";
+		monto=0;
+		
+	}
+	
+
+}

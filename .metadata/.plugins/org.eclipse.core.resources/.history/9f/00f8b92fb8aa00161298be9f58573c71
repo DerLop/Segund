@@ -1,0 +1,98 @@
+package py.edu.facitec.examen_parcial_ii.buscadores;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import py.edu.facitec.examen_parcial_ii.dao.ClienteDao;
+import py.edu.facitec.examen_parcial_ii.interfaces.InterfazBuscadorClientes;
+import py.edu.facitec.examen_parcial_ii.modelo.Cliente;
+import py.edu.facitec.examen_parcial_ii.presentacion.ModeloTablaCliente;
+
+import javax.swing.BoxLayout;
+import javax.swing.JTextField;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.List;
+
+public class BuscadorCliente extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField tfBuscar;
+	private JTable table;
+	private ModeloTablaCliente mCliente =  new ModeloTablaCliente();
+	private InterfazBuscadorClientes interfaz;
+	private ClienteDao dao;
+	private List<Cliente> clientes;
+
+	public void setInterfaz(InterfazBuscadorClientes interfaz){
+		this.interfaz = interfaz;
+	}
+	
+	/**
+	 * Create the dialog.
+	 */
+	public BuscadorCliente() {
+		setBounds(100, 100, 514, 324);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		setLocationRelativeTo(null);
+		{
+			tfBuscar = new JTextField();
+			tfBuscar.addKeyListener(new KeyAdapter() {
+				@Override
+				public void keyPressed(KeyEvent e) {
+					if(e.getKeyCode() == KeyEvent.VK_ENTER){
+						cargarFormulario();
+					}
+				}
+			});
+			contentPanel.add(tfBuscar, BorderLayout.NORTH);
+			tfBuscar.setColumns(10);
+		}
+		{
+			JScrollPane scrollPane = new JScrollPane();
+			contentPanel.add(scrollPane, BorderLayout.CENTER);
+			{
+				table = new JTable();
+				table.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						if(e.getClickCount() == 2){
+							seleccionarCliente();
+						}
+					}
+				});
+				scrollPane.setViewportView(table);
+			}
+		}
+		table.setModel(mCliente);
+		
+		
+	}
+	private void cargarFormulario() {
+		dao = new ClienteDao();
+		clientes = dao.recuperarPorFiltro(tfBuscar.getText());
+		mCliente.setLista(clientes);
+		mCliente.fireTableDataChanged();
+		
+
+	}
+	private void seleccionarCliente() {
+		
+
+	}
+
+}

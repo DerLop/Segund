@@ -1,0 +1,9 @@
+package py.edu.facitec.examen_parcial_ii.interfaces;
+
+import py.edu.facitec.examen_parcial_ii.modelo.Cliente;
+
+public interface InterfazBuscadorClientes {
+	
+	public void setCliente(Cliente cliente);
+
+}

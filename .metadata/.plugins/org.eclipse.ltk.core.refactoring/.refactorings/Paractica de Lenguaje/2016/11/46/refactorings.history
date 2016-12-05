@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;py.edu.facitec.edgar.entidad.TargetaDeCredito.java&apos; to &apos;TarjetaDeCredito.java&apos;&#x0D;&#x0A;- Original project: &apos;Paractica de Lenguaje&apos;&#x0D;&#x0A;- Original element: &apos;py.edu.facitec.edgar.entidad.TargetaDeCredito.java&apos;&#x0D;&#x0A;- Renamed element: &apos;py.edu.facitec.edgar.entidad.TarjetaDeCredito.java&apos;" description="Rename compilation unit &apos;TargetaDeCredito.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;py.edu.facitec.edgar.entidad{TargetaDeCredito.java" name="TarjetaDeCredito.java" references="false" stamp="1479171399578" version="1.0"/>
+</session>
